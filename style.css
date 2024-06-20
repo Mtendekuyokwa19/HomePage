@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    box-sizing: border-box;
+   
+}
+
+body{
+
+    ---backgroundColorHeader:#606c38;
+    ---aboutMeBackdrop:#023047;
+    ---headings:35px;
+    ---iconSize:25px;
+
+
+}
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.skewedRectangle{
+    position: absolute;
+    width: calc(100vw + 100vw);
+    height: 80vh;
+  
+    transform: translate(-200px,-60vh) rotate(-10deg) ;
+    background-color: var(---backgroundColorHeader);
+    z-index:1;
+   
+    
+
+}
+
+
+.imageWithBio{
+--roundedEdges:18px;
+--width:60vw;
+--color:white;
+
+    position: absolute;
+    z-index:2;
+    top: 10vw;
+    left: 20vw;
+    width: var(--width);
+    border-radius: calc(var(--roundedEdges) + 3px);
+   display: flex;
+    background-color: var(---aboutMeBackdrop);
+    color:var(--color);
+
+    .person{
+        display: flex;
+        img{
+            border-radius: var(--roundedEdges);
+        }
+    }
+    
+   
+
+}
+.name{
+    --font-size:40px;
+    --color:white;
+    margin-top:-50px;
+    font-size: var(--font-size);
+    text-shadow: 0px 2px 20px black;
+    color: var(--color);
+    text-align: center;
+  
+   
+ 
+}
+
+.bio{
+    --size:23px;
+    padding: var(--size);
+
+    display:flex ;
+    flex-direction: column;
+    gap:var(--size) ;
+    .aboutMe{
+        font-size:var(---headings) ;
+    }
+    .icons{
+        display: flex;
+        justify-content: end;
+        gap: var(--size);
+        svg{
+            width: var(---iconSize);
+            height: var(var(---iconSize));
+        }
+    }
+}
+
