@@ -19,6 +19,9 @@ body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    
+    justify-content: space-between;
+ 
 }
 
 
@@ -99,14 +102,14 @@ body{
 }
 
 main{
-    position: absolute;
+    position: relative;
         z-index: 2;
         top: 10vw;
         left: 10vw;
     display: flex;
     flex-direction: column;  
     width: 80vw;
-    height: 80vh;  
+   
     gap: 5vh;
 
 
@@ -114,7 +117,7 @@ main{
 .projects{
     display: grid;
    grid-template-columns: repeat(3,1fr);
-   grid-template-rows: repeat(3,1fr);
+   grid-template-rows: repeat(2,1fr);
    gap: calc(2vw - 20px);
 }
 .card{
@@ -156,4 +159,71 @@ img{
     display: flex;
     align-items: center;
  }   
+}
+
+footer{
+  --footerImgae:320px;
+    background-color: var(---backgroundColorHeader);
+  
+  
+    padding:10px 80px;
+    display: flex;
+    justify-content: space-around;
+    img{
+        width: var(--footerImgae);
+        border-radius:12px;
+    }
+
+        h3 {
+            font-size: 45px;
+        }
+
+}
+.Details{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 12px;
+
+    .icons{
+        display: flex;
+        gap: 13px;
+        svg{
+            width: var(---iconSize);
+            height: var(---iconSize);
+        }
+
+        margin-top: 30px;
+    }
+
+    
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30vh;
+    width: calc(100vw + 30px);
+
+   
+}
+.contactDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    p>svg{
+        width: var(---iconSize);
+        height: var(---iconSize);
+    }
+  
+    p{
+        display: flex;
+        
+        align-items: center;
+        gap: 4px;
+    }
 }
