@@ -42,10 +42,7 @@ body{
 --width:60vw;
 --color:white;
 
-    position: absolute;
-    z-index:2;
-    top: 10vw;
-    left: 20vw;
+    
     width: var(--width);
     border-radius: calc(var(--roundedEdges) + 3px);
    display: flex;
@@ -74,11 +71,16 @@ body{
    
  
 }
+.header{
+    width: inherit;
+    display: flex;
+    justify-content: center;
+}
 
 .bio{
     --size:23px;
     padding: var(--size);
-
+ 
     display:flex ;
     flex-direction: column;
     gap:var(--size) ;
@@ -96,3 +98,62 @@ body{
     }
 }
 
+main{
+    position: absolute;
+        z-index: 2;
+        top: 10vw;
+        left: 10vw;
+    display: flex;
+    flex-direction: column;  
+    width: 80vw;
+    height: 80vh;  
+    gap: 5vh;
+
+
+}
+.projects{
+    display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(3,1fr);
+   gap: calc(2vw - 20px);
+}
+.card{
+---backgroundColorCard:#84a98c;
+---imgSize:300px;
+---padding:5px;
+--borderRadius:6px;
+
+border-radius: var(--borderRadius);
+box-shadow: 2px 2px 2px black;
+padding: var(---padding);
+background-color: var(---backgroundColorCard);
+display: flex;
+flex-direction: column;
+gap: var(---padding);
+
+align-items: center;
+
+svg{
+    width: var(---iconSize);
+    height: var(---iconSize);
+
+}
+.description{
+    width: var(---imgSize);
+}
+img{
+    width: var(---imgSize);
+}
+    .title{
+        display: flex;
+        justify-content: space-between;
+        width:var(---imgSize)
+     
+        
+    }
+
+ .projectName{
+    display: flex;
+    align-items: center;
+ }   
+}
