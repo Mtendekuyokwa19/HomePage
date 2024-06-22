@@ -50,6 +50,7 @@ body{
         .descriptionSelf{
             margin-top: 13px;
             font-size: 18px;
+            padding: 13px;
 
         }
         .icons{
@@ -244,7 +245,7 @@ footer{
     }
 }
 
-@media (max-width:1000px) and (min-width:500px) {
+@media (max-width:1024px) and (min-width:580px) {
     .projects{
         grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
@@ -295,9 +296,16 @@ footer{
         padding: 15px;
     }
 .name {
-        position: absolute;
-        margin-top: 0px;
-        height: 40px;
+    position: relative;
+       top: -250px;
+        
+       
+    }
+    .aboutMe{
+        text-align: center;
+    }
+    .descriptionSelf{
+        padding: 3px;
     }
  .imageWithBio {
              width: 240px;
