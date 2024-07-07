@@ -4,7 +4,7 @@
     appearance: none;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
-   
+
 }
 
 body{
@@ -20,9 +20,9 @@ body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    
+
     justify-content: space-between;
- 
+
 }
 
 
@@ -34,7 +34,7 @@ body{
 --width:60vw;
 --color:white;
 
-    
+
     width: var(--width);
     border-radius: calc(var(--roundedEdges) + 3px);
    display: flex;
@@ -63,21 +63,21 @@ body{
                 height: var(---iconSize);
             }
         }
-       
+
         img{
             border-radius: var(--roundedEdges);
-            
-            
+
+
         }
         .image{
             float: left;
             margin: 20px;
             height: auto;
-          
+
         }
     }
-    
-   
+
+
 
 }
 .name{
@@ -88,12 +88,12 @@ body{
     text-shadow: 0px 2px 20px black;
     color: var(--color);
     text-align: center;
-  
-   
- 
+
+
+
 }
 .header{
-  
+
     display: flex;
     justify-content: center;
 }
@@ -101,7 +101,7 @@ body{
 .bio{
     --size:23px;
     padding: var(--size);
- 
+
     display:flex ;
     flex-direction: column;
     gap:var(--size) ;
@@ -112,7 +112,7 @@ body{
         display: flex;
         justify-content: end;
         gap: var(--size);
-        
+
         svg{
             width: var(---iconSize);
             height: var(var(---iconSize));
@@ -126,9 +126,9 @@ main{
         top: 10vw;
         left: 10vw;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     width: 80vw;
-   
+
     gap: 5vh;
 
 
@@ -170,21 +170,21 @@ img{
         display: flex;
         justify-content: space-between;
         width:var(---imgSize)
-     
-        
+
+
     }
 
  .projectName{
     display: flex;
     align-items: center;
- }   
+ }
 }
 
 footer{
   --footerImgae:320px;
     background-color: var(---backgroundColorHeader);
-  
-  
+
+
     padding:10px 80px;
     display: flex;
     justify-content: space-around;
@@ -217,7 +217,7 @@ footer{
         margin-top: 30px;
     }
 
-    
+
 }
 
 
@@ -228,7 +228,7 @@ footer{
     gap: 30vh;
     width: calc(100vw + 30px);
 
-   
+
 }
 .contactDetails{
     display: flex;
@@ -238,16 +238,20 @@ footer{
         width: var(---iconSize);
         height: var(---iconSize);
     }
-  
+
     p{
         display: flex;
-        
+
         align-items: center;
         gap: 4px;
     }
 }
 
-@media (max-width:1024px) and (min-width:580px) {
+@media (max-width:1075px) and (min-width:680px) {
+
+    body{
+        font-size: 2vmin;
+    }
     .projects{
         grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
@@ -256,15 +260,15 @@ footer{
     .content{
         gap: 30vh;
     }
-   
-      
-      .name{
-        position: absolute;
-        top: -90px;
-        left:200px
 
+
+      .name{
+        position: relative;
+        top: 9vh;
+        left:-24vw;
+        font-size:1.8rem;
       }
-   
+
         body {
             overflow-x: hidden;
         }
@@ -275,7 +279,7 @@ footer{
         }
     }
 
-  
+
     .image{
         height: 200px;
     }
@@ -286,11 +290,16 @@ footer{
     .person{
        text-wrap: wrap;
     }
-    
+
 }
 
-@media (max-width:425px) {
-   
+@media (max-width:680px) {
+
+    .imageOnText>picture>img,.photo>picture>img{
+
+        width: 55vw;
+    }
+
     .bio{
         font-size: 16px;
     }
@@ -298,12 +307,14 @@ footer{
         font-size: 14px;
         padding: 15px;
     }
-.name {
-    position: relative;
-       top: -250px;
-        
-       
-    }
+ .name {
+    font-size: 34px;
+     position: relative;
+     top: -7vh;
+
+ }
+
+
  .person{
     .image {
             display: flex;
@@ -312,17 +323,23 @@ footer{
     }
     h1{
         text-align: center;
+
     }
 
- }
 
+ }
+.myWorkTitle{
+    text-align: center;
+}
 
  .projects {
-            grid-template-columns: repeat(1, 310px);
-            grid-template-rows: repeat(6, 1fr);
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
             gap: 10px;
         }
-    
+
 .content {
             gap: 30vh;
     }
@@ -331,19 +348,19 @@ footer{
         gap:12px;
         font-size: 14px;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    padding: 10px 10px;
-    
+
     .Details{
         text-align: center;
     }
-        
+
     picture,div,p {
      display: flex;
      justify-content: center;
 
     }
     }
-    
-}
 
+}
